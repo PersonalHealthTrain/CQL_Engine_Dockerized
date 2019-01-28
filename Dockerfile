@@ -30,4 +30,4 @@ RUN mkdir /cql_execution_service/
 COPY cql_execution_service/* /cql_execution_service/
 WORKDIR /cql_execution_service/
 RUN mvn install
-COPY target/CQLExecSvc-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/root.war
+COPY target/CQLExecSvc-1.0-SNAPSHOT.war var/lib/jetty/webapps/root.war
