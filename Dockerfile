@@ -29,5 +29,5 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN mkdir /cql_execution_service/
 COPY cql_execution_service/* /cql_execution_service/
 WORKDIR /cql_execution_service/
-RUN mvn clean && mvn -Djetty.http.port=8083 jetty:run 
+RUN mvn install && mvn -Djetty.http.port=8083 jetty:run 
 EXPOSE 8083
