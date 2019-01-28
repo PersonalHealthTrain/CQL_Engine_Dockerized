@@ -26,7 +26,7 @@ RUN apt-get -y update && apt-get install -y --force-yes maven
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
+RUN mkdir /cql_execution_service/
 COPY cql_execution_service/* /cql_execution_service/
 
 RUN mvn clean && mvn -Djetty.http.port=8083 jetty:run 
