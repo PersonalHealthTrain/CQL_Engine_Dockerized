@@ -27,7 +27,7 @@ RUN apt-get -y update && apt-get install -y --force-yes git
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-RUN git clone https://github.com/PersonalHealthTrain/CQL_Engine_Dockerized.git
+RUN git clone hhttps://github.com/PersonalHealthTrain/CQL_Engine_FHIR_Server.git
 WORKDIR "CQL_Engine_Dockerized/cql_execution_service/"
 RUN mvn install && mvn -Djetty.http.port=8083 jetty:run 
 EXPOSE 8083
